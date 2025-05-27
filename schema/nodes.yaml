@@ -1,0 +1,15 @@
+Node: Game
+Description: A specific work of interactive art (or a group of programs all representing a single work but differing by language or small content differences).
+Properties:
+- id: int
+- common_name: text
+- description: text
+Relations:
+- [:PART_OF]->(s.Series)
+- [:PART_OF]->(f.Franchise)
+- [:CONTAINS]->(c.Character)
+- [:BUILT_WITH]->(t.Tool)
+- [:RELEASED]->(r.Release)
+- [:DERIVED_FROM]->(g2.Game)
+- [:CONTINUES]->(g2.Game)
+- [INFLUENCED]->(g2.Game) # Possibly redundant through shared concept paths? Yes, but keeping for posterity
